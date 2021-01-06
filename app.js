@@ -4,6 +4,7 @@ const app = express();
 
 // router
 const todolistRouter = require("./routes/todolist-routes");
+const userRouter = require("./routes/users-routes");
 
 
 // default settings
@@ -21,6 +22,7 @@ app.use((error, req, res, next) => {
 
 // Api
 app.use('/api/todo', todolistRouter);
+app.use('/api/user', userRouter);
 
 // connect mongoDB
 mongoose
